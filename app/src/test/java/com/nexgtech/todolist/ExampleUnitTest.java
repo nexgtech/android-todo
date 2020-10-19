@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.nexgtech.todolist;
 
 import org.junit.Test;
 

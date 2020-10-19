@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.nexgtech.todolist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,26 +6,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-public class RegisterActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_main);
 
-        TextView button = findViewById(R.id.textSignIn);
+        Button button = findViewById(R.id.btnStarted);
         // Capture button clicks
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLoginActivity();
+                openRegisterActivity();
             }
         });
     }
-    public void openLoginActivity(){
-        Intent intent = new Intent(this, LoginActivity.class);
+    public void openRegisterActivity(){
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 }
